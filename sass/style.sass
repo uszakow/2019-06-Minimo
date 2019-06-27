@@ -25,17 +25,17 @@ body
 
 .pageheader
     margin: 64/12*1% 68/12*1% 80/12*1% 68/12*1%
-    .row-pageheader
+    &-row
         @extend %row
         align-items: center
         margin-bottom: 66/12*1%
-    .header-menu
+    &-menu
         width: 572px
         font-size: $px14
         text-transform: uppercase        
         a
             color: $grey
-    .pageheader-nav
+    &-nav
         display: flex
         flex-direction: column
         align-items: flex-end
@@ -49,7 +49,7 @@ body
     align-items: center
     padding-bottom: 70/12*1%
     margin-bottom: 108/12*1%
-    label
+    & label
         width: 400px
         display: flex
         justify-content: space-between
@@ -62,7 +62,7 @@ body
             width: calc(100% - 40px)
             border: 0
             padding-left: 3px
-    .main-central-title
+    &-title
         font-size: $px30
         color: #333333
         margin: 58/12*1% 0 82/12*1%
@@ -134,14 +134,14 @@ body
     padding: 40px 70px 40px 150px
     display: flex
     justify-content: space-between
-    .pagefooter-menu
+    &-menu
         font-size: $px14
         color: #101010        
         a
             color: inherit
-    .pagefooter-menu-left
+    &-menu-left
         width: 200px
-    .pagefooter-menu-right
+    &-menu-right
         width: 140px
 
 label.menu-controller
@@ -161,9 +161,9 @@ input#menu-controller
         &:hover
             text-decoration: underline
             cursor: pointer
-    .header-menu
+    .pageheader-menu
         display: none
-    #menu-controller:checked ~ .header-menu
+    #menu-controller:checked ~ .pageheader-menu
         display: flex
         width: auto
         flex-direction: column
@@ -181,10 +181,10 @@ input#menu-controller
         width: 90%
     .pagefooter
         padding: 40px 20px 40px
-        .pagefooter-menu-left
+        &-menu-left
             flex-direction: column
             justify-content: flex-start
-        .pagefooter-menu-right
+        &-menu-right
             flex-direction: column
             align-items: flex-end
             li
