@@ -1,61 +1,42 @@
-$px14: 14px
-$px30: 30px
-$grey: #626262
-%row
-    width: 100%
-    display: flex
-    justify-content: space-between
-    img
-        width: 100%
-%col
-    display: inline-block
-    img
-        width: 100%
-        margin-bottom: 10px
-%ubuntu
-    font-family: 'Ubuntu', sans-serif
-    font-weight: 300
-    font-size: $px14
-    color: #B4AD9E
-    text-transform: uppercase
-
+@import vars
 
 body
     font-family: 'Playfair Display', serif
 
 .pageheader
-    margin: 64/12*1% 68/12*1% 80/12*1% 68/12*1%
+    margin: 5.2vw 5.7vw 5.8vw 5.7vw
     &-row
         @extend %row
         align-items: center
-        margin-bottom: 66/12*1%
+        margin-bottom: 5.5vw
     &-menu
         width: 572px
         font-size: $px14
         text-transform: uppercase        
         a
             color: $grey
+            text-decoration: none        
+            &:hover
+                text-decoration: underline
     &-nav
-        display: flex
-        flex-direction: column
+        @extend %flexcol
         align-items: flex-end
         position: relative
 
 .main-central
+    @extend %flexcol
     width: 100%
     background-color: #F0F0F0
-    display: flex
-    flex-direction: column
     align-items: center
-    padding-bottom: 70/12*1%
-    margin-bottom: 108/12*1%
+    padding-bottom: 70/12*1vw
+    margin-bottom: 108/12*1vw
     & label
         width: 400px
         display: flex
         justify-content: space-between
         padding-bottom: 10px
         border-bottom: 1px solid black
-        & #email
+        & .email
             font-size: $px14
             color: #707070
             background-color: transparent
@@ -65,7 +46,7 @@ body
     &-title
         font-size: $px30
         color: #333333
-        margin: 58/12*1% 0 82/12*1%
+        margin: 58/12*1vw 0 82/12*1vw
         letter-spacing: .03em
         text-align: center
 
@@ -75,13 +56,15 @@ body
 .row
     @extend %row
     align-items: flex-start
-    margin-bottom: 60/12*1%
+    margin-bottom: 58px    
     .section-name
-        @extend %ubuntu       
+        @extend %ubuntu
+        margin-top: 28px     
     .section-title
         font-size: $px30
         color: $grey
-        margin: 22px 0 30px
+        margin: 20px 0 30px
+        letter-spacing: .01em
     .section-text
         font-size: $px14
         color: $grey
@@ -92,12 +75,9 @@ body
         text-decoration: none
         &:hover
             text-decoration: underline
-.col
-    @extend %col
-    margin-bottom: 72/12*1%
-.col-2
-    @extend %col
-    display: inline-block
+.col    
+    margin-bottom: 72/12*1vw
+.col-2   
     width: calc(50% - 30px)
 
 .botton
@@ -124,10 +104,7 @@ body
     display: flex
     justify-content: space-between
     align-items: flex-start
-    a
-        text-decoration: none
-        &:hover
-            text-decoration: underline
+   
 
 .pagefooter
     background-color: #F0F0F0
@@ -139,6 +116,9 @@ body
         color: #101010        
         a
             color: inherit
+            text-decoration: none        
+            &:hover
+                text-decoration: underline
     &-menu-left
         width: 200px
     &-menu-right
